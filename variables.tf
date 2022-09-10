@@ -7,6 +7,8 @@ variable "aws_cred" {
   })
 }
 
+variable "my_ip" {}
+
 variable "env_prefix" {}
 
 variable "vpc_cidr_block" {}
