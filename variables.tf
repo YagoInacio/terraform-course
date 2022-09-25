@@ -17,3 +17,4 @@ variable "avail_zone" {}
 
 variable "instance_type" {}
 variable "public_key_location" {}
+variable "image_name" {}

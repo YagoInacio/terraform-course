@@ -10,3 +10,6 @@
 
 # helper files
 *.csv
+
+# crash logs
+crash.log
