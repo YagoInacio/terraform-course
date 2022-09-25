@@ -133,10 +133,6 @@ data "aws_ami" "latest-amazon-linux-image" {
   }
 }
 
-output "aws_ami" {
-  value = data.aws_ami.latest-amazon-linux-image.id
-}
-
 resource "aws_key_pair" "ssh-key" {
   key_name = "server_key"
   public_key = file(var.public_key_location)
@@ -155,12 +151,7 @@ resource "aws_instance" "myapp-server" {
 
   user_data = file("entry-script.sh")
 
-
   tags = {
     Name = "${var.env_prefix}-server"
   }
-}
-
-output "ec2_public_ip" {
-  value = aws_instance.myapp-server.public_ip
 }
