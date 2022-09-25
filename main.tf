@@ -1,7 +1,15 @@
+terraform {
+  backend "s3" {
+    bucket = "yago-terraform-myapp-bucket"
+    key = "myapp/state.tfstate"
+    region = "us-east-1"
+  }
+}
+
 provider "aws" {  # you can use the usual ./.aws/credentials file, in that case this would be an empty object
-  region = var.aws_cred.region
-  access_key = var.aws_cred.access_key
-  secret_key = var.aws_cred.secret_key
+  # region = var.aws_cred.region
+  # access_key = var.aws_cred.access_key
+  # secret_key = var.aws_cred.secret_key
 }
 
 module "vpc" {

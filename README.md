@@ -20,7 +20,7 @@ Needless to say the importance of Infrastructure as Code to any DevOps professio
 ## Versions used in the project
 - Terraform - 1.2.9
 - AWS provider - 4.29.0
-<!-- - VPC module - 3.12.0 -->
+- VPC module - 3.15.0
 
 ## Usefull Terraform commands
 
